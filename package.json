@@ -1,0 +1,15 @@
+{
+  "name": "dsh-sbom",
+  "version": "0.1.0",
+  "description": "Generate a CycloneDX 1.5 SBOM from a DSH plugin package and its top-level installed dependencies. No network; not a full transitive graph.",
+  "type": "module",
+  "bin": { "dsh-sbom": "bin/dsh-sbom.mjs" },
+  "exports": { ".": "./plugin/index.js", "./sbom": "./src/sbom.mjs", "./plugin": "./plugin/index.js", "./icon": "./icon.svg" },
+  "files": ["bin", "src", "plugin", "skills", "icon.svg", "README.md", "NOTICE.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./plugin/cordis.patch.yml" } },
+  "engines": { "node": ">=20" },
+  "keywords": ["dsh", "deepseek-harness", "sbom", "cyclonedx", "supply-chain"],
+  "license": "MIT",
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "repository": { "type": "git", "url": "https://github.com/lengrufeng2008/dsh-sbom" }
+}
