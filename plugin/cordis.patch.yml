@@ -1,0 +1,4 @@
+- insert:
+    - id: sbom
+      name: dsh-sbom
+      config: {}
